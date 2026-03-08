@@ -8,7 +8,7 @@
         "FieldName": "ServerName",
         "InputType": "string",
         "ParamFieldName": "ServerName",
-        "DefaultValue": "NA RiStl Community Maps FriendlyFire"
+        "DefaultValue": "My Awesome SErver"
     },
     {
         "DisplayName": "Welcome Message",
@@ -19,7 +19,7 @@
         "FieldName": "WelcomeMessage",
         "InputType": "string",
         "ParamFieldName": "WelcomeMessage",
-        "DefaultValue": "Please keep it friendly or risk mute/ban."
+        "DefaultValue": ""
     },
     {
         "DisplayName": "Port",
