@@ -1,68 +1,158 @@
 [
     {
+        "DisplayName": "Server Name",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "The name of the server as it appears in the server browser.",
+        "Keywords": "name,servername",
+        "FieldName": "ServerName",
+        "InputType": "string",
+        "ParamFieldName": "ServerName",
+        "DefaultValue": "NA RiStl Community Maps FriendlyFire"
+    },
+    {
+        "DisplayName": "Welcome Message",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Message displayed to players when they join the server.",
+        "Keywords": "welcome,message,motd",
+        "FieldName": "WelcomeMessage",
+        "InputType": "string",
+        "ParamFieldName": "WelcomeMessage",
+        "DefaultValue": "Please keep it friendly or risk mute/ban."
+    },
+    {
         "DisplayName": "Port",
         "Category": "Over The Top WWI:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "",
-        "Keywords": "",
         "FieldName": "$GamePort",
         "InputType": "number",
         "Hidden": true,
         "ParamFieldName": "PortID",
-        "ExcludeFromImport": true,
-        "EnumValues": {}
+        "ExcludeFromImport": true
     },
     {
-        "DisplayName": "Query Port",
+        "DisplayName": "Server Region",
         "Category": "Over The Top WWI:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "",
-        "Keywords": "",
-        "FieldName": "$QueryPort",
+        "Description": "The geographic region the server is listed under.",
+        "FieldName": "Region",
+        "InputType": "enum",
+        "DefaultValue": "2",
+        "EnumValues": {
+            "-1": "Any",
+            "0": "USA",
+            "1": "EU West",
+            "2": "Australia",
+            "3": "EU East",
+            "4": "China",
+            "5": "South America",
+            "6": "North Africa",
+            "7": "South Africa",
+            "8": "Japan"
+        }
+    },
+    {
+        "DisplayName": "Officer Spawn on Officer",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Gameplay:sports_kabaddi",
+        "Description": "Whether officers can spawn on other officers.",
+        "FieldName": "OfficerSpawnOfficer",
+        "InputType": "checkbox",
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Attacker Respawn Time",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Gameplay:sports_kabaddi",
+        "Description": "Respawn timer for the attacking team.",
+        "FieldName": "AttackerRespawnTime",
         "InputType": "number",
-        "Hidden": true,
-        "ParamFieldName": "SteamQueryPortID",
-        "ExcludeFromImport": true,
-        "EnumValues": {}
+        "Suffix": "seconds",
+        "DefaultValue": "8"
     },
     {
-        "DisplayName": "Server Password",
+        "DisplayName": "Defender Respawn Time",
         "Category": "Over The Top WWI:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the password for players to join the server. Default is no password. Maximum 20 characters",
-        "Keywords": "server,password,ServerPassword",
-        "FieldName": "ServerPassword",
-        "InputType": "password",
-        "ParamFieldName": "ServerPassword",
-        "DefaultValue": "",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Admin Password",
-        "Category": "Over The Top WWI:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the password for players to join the server as an admin in-game. Default is a secure random password. Maximum 20 characters",
-        "Keywords": "admin,password,AdminPassword",
-        "FieldName": "AdminPassword",
-        "InputType": "password",
-        "ParamFieldName": "AdminPassword",
-        "DefaultValue": "{{randomdigits(20)}}",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Player Limit",
-        "Category": "Over The Top WWI:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the maximum number of players allowed on the server at one time",
-        "Keywords": "max,players,player,limit,MaxPlayers",
-        "FieldName": "$MaxUsers",
+        "Subcategory": "Gameplay:sports_kabaddi",
+        "Description": "Respawn timer for the defending team.",
+        "FieldName": "DefenderRespawnTime",
         "InputType": "number",
-        "MinValue": "20",
-        "MaxValue": "200",
-        "ParamFieldName": "MaxPlayerCount",
-        "DefaultValue": "130",
-        "Placeholder": "130",
-        "Suffix": "players",
-        "EnumValues": {}
+        "Suffix": "seconds",
+        "DefaultValue": "8"
+    },
+    {
+        "DisplayName": "Friendly Fire Percent",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Gameplay:sports_kabaddi",
+        "Description": "Percentage of damage dealt to allies.",
+        "FieldName": "FriendlyFirePercent",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "5"
+    },
+    {
+        "DisplayName": "Number of Sappers",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Class Restrictions:groups",
+        "Description": "Maximum number of Sappers allowed.",
+        "FieldName": "NumberOfSappers",
+        "InputType": "number",
+        "DefaultValue": "90"
+    },
+    {
+        "DisplayName": "Number of Specialists",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Class Restrictions:groups",
+        "Description": "Maximum number of Specialists allowed.",
+        "FieldName": "NumberOfSpecialists",
+        "InputType": "number",
+        "DefaultValue": "12"
+    },
+    {
+        "DisplayName": "Number of Infantry Officers",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Class Restrictions:groups",
+        "Description": "Maximum number of Infantry Officers allowed.",
+        "FieldName": "NumberofInfOfficers",
+        "InputType": "number",
+        "DefaultValue": "9"
+    },
+    {
+        "DisplayName": "Number of Snipers",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Class Restrictions:groups",
+        "Description": "Maximum number of Snipers allowed.",
+        "FieldName": "NumberOfSnipers",
+        "InputType": "number",
+        "DefaultValue": "10"
+    },
+    {
+        "DisplayName": "Number of Heavies",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Class Restrictions:groups",
+        "Description": "Maximum number of Heavies allowed.",
+        "FieldName": "NumberOfHeavys",
+        "InputType": "number",
+        "DefaultValue": "12"
+    },
+    {
+        "DisplayName": "Number of Storm Troops",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Class Restrictions:groups",
+        "Description": "Maximum number of Storm Troops allowed.",
+        "FieldName": "NumberofStormTroops",
+        "InputType": "number",
+        "DefaultValue": "25"
+    },
+    {
+        "DisplayName": "Allow VOIP",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "VOIP:record_voice_over",
+        "Description": "Enable or disable in-game voice chat.",
+        "FieldName": "VoipAllowed",
+        "InputType": "checkbox",
+        "DefaultValue": "true"
     }
 ]
